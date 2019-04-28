@@ -2,7 +2,7 @@ public class Solution_4 {
     public static void main(String[] args){
 		
         String res="We are happy.";
-		//ÔÚĞÂµÄ×Ö·û´®ÉÏ¸ü¸Ä£¨ĞèÒª¶îÍâµÄÄÚ´æ¿Õ¼ä£©
+		//åœ¨æ–°çš„å­—ç¬¦ä¸²ä¸Šæ›´æ”¹ï¼ˆéœ€è¦é¢å¤–çš„å†…å­˜ç©ºé—´ï¼‰
         StringBuilder str=new StringBuilder();
         for (int i = 0; i <res.length(); i++) {
             if (res.charAt(i)!=' '){
@@ -18,7 +18,7 @@ public class Solution_4 {
     }
 
 
-	//²»ÓÃºÄ·ÑÆäËûÌ«¶àÄÚ´æ£¬ÔÚÔ­Ê¼×Ö·û´®ÉÏÖ±½ÓĞŞ¸Ä£º
+	//ä¸ç”¨è€—è´¹å…¶ä»–å¤ªå¤šå†…å­˜ï¼Œåœ¨åŸå§‹å­—ç¬¦ä¸²ä¸Šç›´æ¥ä¿®æ”¹ï¼š
 	StringBuilder str = new StringBuilder("We are happy.");
         int space = 0;
         int len = str.length();
@@ -28,7 +28,7 @@ public class Solution_4 {
         int fir = len - 1;
         int sec = len + space * 2 - 1;
         str.setLength(sec+1);
-        for (; fir >= 0 && fir <= sec + 1; --fir) {
+        for (; fir >= 0 && sec>= 0; fir--) {
             if (str.charAt(fir) == ' ') {
                 str.setCharAt(sec--, '0');
                 str.setCharAt(sec--, '2');
