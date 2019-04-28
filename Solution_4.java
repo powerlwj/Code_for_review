@@ -27,8 +27,11 @@ public class Solution_4 {
         }
         int fir = len - 1;
         int sec = len + space * 2 - 1;
-        str.setLength(sec+1);
-        for (; fir >= 0 && fir <= sec + 1; --fir) {
+        for (int i = 0; i < space; i++) {
+            str = str.append("  ");
+        }
+        //以上代码的目的就是将原始字符串扩容，方便下面进行后向移动；
+        for (; fir >= 0 && sec >=0; fir--) {
             if (str.charAt(fir) == ' ') {
                 str.setCharAt(sec--, '0');
                 str.setCharAt(sec--, '2');
@@ -39,4 +42,3 @@ public class Solution_4 {
         }
 
         System.out.println(str.toString());
-}
