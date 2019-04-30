@@ -1,5 +1,5 @@
 import java.util.LinkedHashMap;
-//·½·¨1£ºÀûÓÃ¹þÏ£º¯Êý
+//æ–¹æ³•1ï¼šåˆ©ç”¨å“ˆå¸Œå‡½æ•°
 public class Solution_35 {
     public static void main(String[] lwj){
         String str="abcdacdef";
@@ -7,7 +7,7 @@ public class Solution_35 {
     }
 
     public static int FirstNotRepeatingChar(String str){
-        int res=0;
+        int res=-1;
         LinkedHashMap<Character,Integer> hashMap=new LinkedHashMap<>();
         for (int i = 0; i <str.length() ; i++) {
             if (hashMap.containsKey(str.charAt(i))){
@@ -26,3 +26,4 @@ public class Solution_35 {
         return res;
     }
 }
+  
