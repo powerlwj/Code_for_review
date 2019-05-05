@@ -11,10 +11,14 @@ public class Solution_11 {
         for (int i = 0; i <Math.abs(exponent) ; i++) {
             res*=base;
         }
+        //超出了double的范围
         if (res>1.7976931348623157E308) return -1;
+        //exponent为正数
         if (exponent>=0){
             return res;
-        }else {
+        }
+        //exponent为负数
+        else {
             return 1/res;
         }
     }
